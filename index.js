@@ -8,7 +8,7 @@ const port = 4000;
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/", async (req, res) => {
+app.get("https://shivanjali0212.github.io/i-m-bored/", async (req, res) => {
   try {
     const response = await axios.get("https://bored-api.appbrewery.com/random");
     const result = response.data;
@@ -21,7 +21,7 @@ app.get("/", async (req, res) => {
   }
 });
 
-app.post("/", async (req, res) => {
+app.post("https://shivanjali0212.github.io/i-m-bored/", async (req, res) => {
 
   try{
     const type= req.body.type
