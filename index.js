@@ -3,12 +3,12 @@ import bodyParser from "body-parser";
 import axios from "axios";
 
 const app = express();
-const port = 4000;
+const port = 'https://shivanjali0212.github.io/i-m-bored/';
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("https://shivanjali0212.github.io/i-m-bored/", async (req, res) => {
+app.get("/", async (req, res) => {
   try {
     const response = await axios.get("https://bored-api.appbrewery.com/random");
     const result = response.data;
@@ -21,7 +21,7 @@ app.get("https://shivanjali0212.github.io/i-m-bored/", async (req, res) => {
   }
 });
 
-app.post("https://shivanjali0212.github.io/i-m-bored/", async (req, res) => {
+app.post("/", async (req, res) => {
 
   try{
     const type= req.body.type
